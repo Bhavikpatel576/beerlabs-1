@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+
+{% block jumbotron %}
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Lets Find your Perfect Beer!</h1>
+        <p> We're helping you find the perfect local craft brew. After you complete our survey we will get a general idea
+        of your beer profile. Then we find other people that share a similar profile and create a large shipment to your local craftbrew store for you to enjoy at a discount
+        </p>
+        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+      </div>
+    </div>
+    
+{% endblock %}
+
+{% block content %}
+        <div>
+            <div class="col-sm-3">
+              <h2>User Profile</h2>
+              <p> Access your profile to learn more about your taste and share with friends </p>
+              <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+            </div>
+            <div class="col-sm-3">
+              <h2>Beer Profile</h2>
+              <p> Take the survey so we can learn more about what you like and what you don't. </p>
+              <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+           </div>
+            <div class="col-sm-3">
+              <h2>Shop</h2>
+              <p>Buy things from us so we can do this full time</p>
+              <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+            </div>
+        
+            <div class="col-sm-3">
+               
+          
+                    <h1> Join this awesome site! </h1>
+                <form method = 'POST' action=''>  {% csrf_token %}
+                    {{form.as_p}}     
+                    <input type = 'submit' class='btn btn-success btn-block'>
+                        
+                </form>
+            </div>
+        </div>
+
+{% endblock %}
